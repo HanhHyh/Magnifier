@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	
+	<body>
+		<div id="content">
+			<div id="left">
+				<div id="kk"></div>
+				<img src="img/timg.png"/>
+			</div>
+			<div id="middle">
+				<h3>英雄简介</h3>
+				<p>前排半肉半输出型英雄，变龙后攻击带有恐怖的火焰和溅射效果。前排半肉半输出型英雄，变龙后攻击带有恐怖的火焰和溅射效果。</p>
+				<p>
+					<img src="img/bg1.jpg"/>
+					<span>龙骑士在近身距离猛击对手，造成小额伤害和长时间晕眩。龙形态下，攻击范围更大并且击退更远。</span>
+				</p>
+				<p>
+					<img src="img/bg2.jpg"/>
+					<span>向面前吐出一团火焰，对敌方造成范围伤害。龙形态的伤害范围更大。向面前吐出一团火焰，对敌方造成范围伤害，龙形态的火焰范围更大</span>
+				</p>
+				<p>
+					<img src="img/bg3.jpg"/>
+					<span>龙骑士变身为龙，拥有附带燃烧效果的远程攻击能力，并且有100%溅射效果。随着身形的变大，各个技能的作用范围也变得更远。</span>
+				</p>
+				<p>
+					<img src="img/bg4.jpg"/>
+					<span>龙骑士身上所流的龙族之血使他有更高的魔抗和持续的生命回复能力。提升【90】点魔抗，提升【270】点每秒生命值回复。</span>
+				</p>
+			</div>
+			<div id="right">
+				<img src="img/timg.png"/>
+			</div>
+		</div>
+		<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				
+				$("#kk,#right").hide();
+				
+				$("#left").hover(function(){
+					$("#kk,#right").show();
+					$("#left").mousemove(function(e){
+						console.log(e);
+						//x和y即用来控制#kk离#left的距离
+						var x = e.pageX-$("#left").offset().left-100;
+						var y = e.pageY-$("#left").offset().top-125;
+						//判断是为了控制框框仅在#left的范围内移动。
+						if(x<0){
+							x=0
+						}
+						if(y<0){
+							y=0
+						}
+						if(x>200){
+							x=200
+						}
+						if(y>250){
+							y=250
+						}
+						//控制kk的移动
+						$("#kk").css({
+								left:x+"px",
+								top:y+"px"
+							})
+						//控制大图片的移动
+						$("#right img").css({
+							left:-2*x+"px",
+							top:-2*y+"px"
+						})
+						
+					})
+				},function(){
+					$("#kk,#right").hide();
+				})
+				
+			})
+				
+		</script>
+		
+		
+		
+	</body>
+</html>

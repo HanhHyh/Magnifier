@@ -1,0 +1,86 @@
+* {
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-weight: 500;
+	font-family: "微软雅黑", sans-serif;
+}
+
+#content {
+	width: 810px;
+	height: 510px;
+	padding: 20px;
+	background-image: url(../img/equip_detail_bg.png);
+	background-size: 100% 100%;
+	position: relative;
+	margin: 50px auto;
+}
+
+#left {
+	width: 405px;
+	height: 510px;
+	background-image: url(../img/herodetail-skillpanel.png);
+	background-size: 100% 100%;
+	float: left;
+	position: relative;
+}
+
+#left img {
+	margin-top: 15px;
+	width: 403px;
+	height: 467px;
+}
+
+#left #kk {
+	width: 202px;
+	height: 250px;
+	position: absolute;
+	background: #ccc;
+	opacity: .5;
+}
+
+#middle {
+	width: 405px;
+	height: 510px;
+	float: left;
+}
+
+#middle img {
+	margin-left: 5px;
+	border-radius: 10px;
+	box-shadow: 0 0 2px #ccc, 0 0 5px #ccc, 0 0 8px #ccc;
+}
+
+p {
+	margin-top: 15px;
+}
+
+h3 {
+	width: 100px;
+	height: 20px;
+	margin: 0 auto;
+}
+
+span {
+	position: relative;
+	display: inline-block;
+	width: 300px;
+	font-size: 14px;
+	bottom: 20px;
+	margin-left: 10px;
+}
+
+#right {
+	width: 405px;
+	height: 510px;
+	right: 20px;
+	position: absolute;
+	border: 1px solid #ccc;
+	overflow: hidden;
+}
+
+#right img {
+	width: 807px;
+	height: 1000px;
+	position: absolute;
+}
